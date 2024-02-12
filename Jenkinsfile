@@ -15,16 +15,10 @@ pipeline {
                 bat 'npm install'
             }
         }
-        
-        stage('Test') {
+
+		stage('Build image') {
             steps {
-                // Ajoutez ici vos tests de qualité de code si nécessaire
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                // sh 'docker-compose up -d'
+                docker.build('dev')
             }
         }
     }
