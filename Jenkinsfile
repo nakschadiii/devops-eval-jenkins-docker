@@ -17,7 +17,7 @@ pipeline {
 		stage('Build image') {
             steps {
 				script {
-	                docker.build('jenkins-docker')
+	                docker.build('nakschadiii/helloworld')
 				}
             }
         }
