@@ -17,7 +17,7 @@ pipeline {
 		stage('Build image') {
             steps {
 				script {
-	                docker.build('dev')
+	                docker.build('thirsty_pare')
 				}
             }
         }
